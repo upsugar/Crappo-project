@@ -1,0 +1,1006 @@
+
+/*Подключаем локальные шрифты*/
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik'),
+        local('Rubik Light'),
+        url('fonts/Rubiklight.woff2') format('woff2'),
+        url('fonts/Rubiklight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik'),
+        local('Rubik-Regular'),
+        url('Rubik.woff2') format('woff2'),
+        url('Rubik.woff') format('woff'),
+        url('Rubik.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Medium'),
+        local('Rubik-Medium'),
+        url('Rubikmedium.woff2') format('woff2'),
+        url('Rubikmedium.woff') format('woff'),
+        url('Rubikmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Bold'),
+        local('Rubik-Bold'),
+        url('Rubikbold.woff2') format('woff2'),
+        url('Rubikbold.woff') format('woff'),
+        url('Rubikbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: local('Rubik Black'),
+        local('Rubik-Black'),
+        url('Rubikblack.woff2') format('woff2'),
+        url('Rubikblack.woff') format('woff'),
+        url('Rubikblack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Semi Bold'),
+        local('Inter-Semi-Bold'),
+        url('Inter-SemiBold.woff2') format('woff2'),
+        url('Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/*Указываем box-sizing*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+/*Убираем внешние отступы*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+
+
+/*Упрощаем работу с изображениями*/
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*Удаляем все анимации и переходы для пользователей, которые предпочитают их не использовать*/
+/*Задаю данное правило заранее, пригодится при анимировании страницы*/
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: Rubik, sans-serif;
+    color: #FFFFFF;
+    font-weight: 300;
+    background-color: #0D0D2B;
+    background-image: linear-gradient(to right bottom, #162157, #161e51, #151b4b, #141846, #131540, #11133c, #101237, #0f1033, #0e0f2f, #0d0d2a, #0b0b26, #090921);
+}
+
+.header {
+    width: 100%;
+    height: 112px;
+    z-index: 1000;
+    position: absolute;
+}
+
+/*Шапка*/
+
+.nav-top {
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.container {
+    max-width: 83.4%;
+    height: 50px;
+    margin: 60px auto 0;
+}
+
+.nav__inner {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav__logo {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__logo:hover {
+    transform: scale(1.15);
+    transition: .15s;
+}
+
+.logo {
+    margin-right: 17px;
+}
+
+.nav__logo p {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+.nav__border {
+    width: 24px;
+    height: 0px;
+    border: 1px solid #F2F2F2;
+    transform: rotate(90deg);
+}
+
+.nav__items {
+    margin-left: 31%;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav__link {
+    margin-left: 32px;
+}
+
+.nav__item:hover {
+    transform: scale(1.15);
+    transition: .15s;
+}
+
+.nav__link:first-child {
+    margin-left: 32px;
+}
+
+.nav__sign_in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav__login {
+    padding: 14px 32px;
+    border-radius: 30px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.nav__login:hover {
+    transform: scale(1.15);
+    transition: .1s;
+    background-color: #3671E9;
+}
+
+.nav__login:first-child {
+    margin-left: 12px;
+}
+
+.nav__login:last-child{
+    margin-right: 12px;
+}
+
+.intro {
+    max-width: 83%;
+    height: 850px;
+    margin-top: 131px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/*Контент интро 1-й */
+.intro__container {
+    max-width: 83.4%;
+    height: 40px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.intro__discount_name {
+    width: 365px;
+    height: 40px;
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: rgba(255,255,255, 0.1);
+    display: inline;
+    text-align: end;
+    padding-right: 11px;
+    padding-top: 8px;
+}
+
+.intro__promo_text {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    margin-top: 0px;
+}
+
+.intro__under_text {
+    margin-top: 24px;
+}
+
+.intro__under_text_text {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.intro__discount_value {
+    position: absolute;
+    height: 32px;
+    width: 113px;
+    padding-left: 4px;
+}
+
+.intro__discount_value_text {
+    font-family: Rubik, sans-serif;
+    height: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    color: #0D0D2B;
+    display: block;
+    padding-left: 16px;
+    padding-top: 4px;
+}
+
+.intro__dicount_name_text {
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
+    font-size: 400px;
+}
+
+.intro__button {
+    margin-top: 32px;
+    max-width: 202px;
+    height: 64px;
+    background-color: #3671E9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.intro__button:hover {
+    transform: scale(1.1);
+    transition: .1s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+
+.intro__button_text {
+    margin-right: 24px;
+}
+
+.intro__button_text_text {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.btc_img {
+    position: absolute;
+    margin-left: 50%;
+
+}
+
+.intro__backgroundline1 {
+    position: absolute;
+    width: 120px;
+    height: 998px;
+    /* left: 670px; */
+    left: 50%;
+    background: linear-gradient(180.09deg, rgba(255, 255, 255, 0) 0.49%, rgba(255, 255, 255, 0.04) 39.06%, rgba(255, 255, 255, 0) 99.92%);
+    transform: rotate(-120deg);
+}
+
+.intro__backgroundline2 {
+    position: absolute;
+    width: 120px;
+    height: 800px;
+    /*left: 1225px;
+    */left: 78%;
+    top: 390px;
+    background: linear-gradient(180.09deg, rgba(255, 255, 255, 0) 0.49%, rgba(255, 255, 255, 0.04) 39.06%, rgba(255, 255, 255, 0) 99.92%);
+    transform: rotate(-120deg);
+    -webkit-transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -ms-transform: rotate(-120deg);
+    -o-transform: rotate(-120deg);
+}
+
+/*Контент 2-го блока*/
+.intro2 {
+    max-width: 1440px;
+    height: 865px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro2__achievements {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro2__statistics {
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.exchange_img {
+    width: 100%;
+    height: 100%;
+}
+
+.investors_img {
+    width: 100%;
+    height: 100%;
+}
+
+.countries_img {
+    width: 100%;
+    height: 100%;
+}
+
+.intro2__exchange {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro2__investors {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro2__countries {
+    display: flex;
+    flex-direction: row;
+}
+
+.intro2__achievements_header {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.intro2__achievements_paragraph {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.intro2__text {
+    display: block;
+    white-space: nowrap;
+    margin-left: 24px;
+}
+
+.promo {
+    margin-left: 65%;
+    margin-top: 177px;
+}
+
+.intro2__button {
+    margin-top: 32px;
+    max-width: 146px;
+    height: 59px;
+    background-color: #3671E9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.intro2__button:hover {
+    transform: scale(1.1);
+    transition: .1s;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -ms-transition: .1s;
+    -o-transition: .1s;
+}
+
+.gpu_img {
+    position: absolute;
+    margin-top: 100px;
+}
+
+/*Контент 3-го блока*/
+
+.intro2__promo_text {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 0px;
+    line-height: 60px;
+    text-align: center;
+    text-align: left;
+}
+
+.intro2__backgroundline1 {
+    position: absolute;
+    width: 120px;
+    height: 998px;
+    left: 65px;
+    background: linear-gradient(180.09deg, rgba(255, 255, 255, 0) 0.49%, rgba(255, 255, 255, 0.04) 39.06%, rgba(255, 255, 255, 0) 99.92%);
+    transform: rotate(-120deg);
+    -webkit-transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -ms-transform: rotate(-120deg);
+    -o-transform: rotate(-120deg);
+}
+
+.intro2__backgroundelement1 {
+    position: absolute;
+    left: 88%;
+    top: 1150px;
+    float: right;
+}
+
+.intro2__backgroundelement2 {
+    position: absolute;
+    top: 1740px;
+    left: 90%;
+}
+
+.intro3 {
+    max-width: 100%;
+    height: 457px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro3__description {
+    text-align: center;
+}
+
+/*Калькулятор*/
+.calculator {
+    width: 942px;
+    height: 371px;
+    margin: 290px auto;
+    position: absolute;
+    background-color: #a0a4ad;
+    border-radius: 16px;
+    filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.2));
+    color: black;
+    text-align: center;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    -webkit-filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.2));
+}
+
+/*Контент 4-го блока*/
+.intro4 {
+    max-width: 100%;
+    height: 1100px;
+    background-color: #FBFCFE;
+}
+
+.intro4__header {
+    text-align: center;
+}
+
+.intro4__header_text {
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #0D0D2B;
+    padding-top: 316px;
+}
+
+.intro4__currency_choice {
+    max-width: 1200px;
+    max-height: 433px;
+    margin: 64px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.currency_card {
+    font-family: Rubik, sans-serif;
+    width: 370px;
+    height: 433px;
+    padding-top: 48px;
+    /*background-color: #969bad63;
+    */background-color: #FFFFFF;
+    border-radius: 16px;
+    text-align: center;
+    color: #0D0D2B;
+    margin-right: 45px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.currency_card:last-child {
+    margin-right: 0;
+}
+
+.currency_card:hover {
+    background-color: #2B076E;
+    color: #FFFFFF;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+.currency_logo {
+    margin: 0 auto 48px;
+}
+
+.currencycard_header {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.currency__name {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.currency_short {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    opacity: 0.7;
+    margin: 11px 0 0 8px;
+}
+
+.currency_description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1%;
+}
+
+.card_startminingbutton {
+    margin: 25px auto 48px;
+}
+
+.card_arrow {
+    margin: 25px auto 48px;
+}
+
+/* .cirqle_img { */
+    position: absolute;
+    width: 686px;
+    height: 686px;
+    left: 337px;
+    top: 3457px;
+}
+
+.cirqle_img:before {
+    position: absolute;
+    content: "";
+    width: 686px;
+    height: 686px;
+    border-radius: 50%;
+    left: 0;
+    top: -457px;
+    background: conic-gradient(from 180deg at 50% 50%,hsla(0,0%,100%,.16) 0deg,hsla(0,0%,100%,0) 1turn);
+    transform: rotate(90deg);
+}
+
+.intro5 {
+    max-width: 100%;
+    max-height: 1874px;
+    background: #2B076E;
+    padding-top: 100px;
+}
+
+.intro5__invest_smart {
+    display: flex;
+    margin-top: 5.34%;
+    text-align: left;
+    align-items: left;
+}
+
+.intro5__invest_smart_text {
+    padding-left: 16.67%;
+    padding-top: 50px;
+}
+
+.intro5__header_2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: left;
+}
+
+.intro5__benefits_description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #E0E0E0;
+    padding-top: 24px;
+}
+
+.intro5__chart_img {
+    padding-left: 15.14%
+}
+
+.intro5__dstats {
+    display: flex;
+    padding-top: 120px;
+    text-align: left;
+    align-items: left;
+}
+
+.intro5__dstats_text {
+    padding-left: 15.14%;
+    padding-top: 120px;
+}
+
+.intro5__invest_offer {
+    display: flex;
+    padding-top: 120px;
+    padding-left: 15.14%;
+    text-align: left;
+}
+
+.intro5__invest_offer_text {
+    padding-top: 10px;
+}
+
+.intro6 {
+    max-width: 100%;
+    height: 392px;
+    background: linear-gradient(180deg, #2B076E 0%, #0D0D2B 100%);
+    padding-top: 88px;
+}
+
+.intro6__start_mining_box {
+    display: flex;
+    width: 83.3%;
+    height: 216px;
+    margin: auto;
+    background: #3671E9;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.intro6__start_mining_box_text_block {
+    display: column;
+    align-items: left;
+    padding: 48px 0 0 48px;
+}
+
+
+.subscribe_form {
+    margin-left: 13.2%;
+}
+
+.subscribe_form input {
+    min-width: 374px;
+    padding: 7px 0;
+    border-bottom: 1px solid hsla(0,0%,100%,.4);
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: .01em;
+    margin-right: 40px;
+
+    display: block;
+    box-sizing: border-box;
+    border-radius: 0;
+    /* outline: none; */
+    border: none;
+    background: none;
+}
+
+.subscribe_form_input {
+    width: 39%;
+    height: 55px;
+    margin-top: 76px;
+    border-bottom: 1px solid #FFFFFF66;
+}
+
+.subscribe_btn {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color:#0D0D2B;
+    width: 152px;
+    height: 55px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+footer {
+    background-color: #0D0D2B;
+}
+
+.footer_box {
+    display: flex;
+    background: #0D0D2B;
+}
+
+
+
+
+
+
+.footer_box_available_payment_systems__logos {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+.footer_social_media {
+    display: flex;
+    flex-direction: row;
+    padding-top: 120px;
+}
+
+.copyright_text {
+    margin-left: 8.33%;
+}
+
+
+
+
+.footer_icons_block {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+
+}
+
+
+
+.footer_box__logo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8.33%;
+}
+
+.footer_box__logo img {
+    height: 40px;
+}
+
+.footer_box_logo__text {
+    /* margin-left: 10%; */
+    margin: 6px 0 0 10%;
+    font-family: Inter;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 4%;
+
+}
+
+.footer_box__quick_link {
+    margin-left: 11.88%;
+}
+
+.footer_box__quick_link p {
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer_box__quick_link ul {
+    list-style: none;
+    padding: 0;
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 36px;
+    color: #F2F2F2;
+}
+
+.footer_box__resources {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer_box__resources p {
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer_box__resources ul {
+    list-style: none;
+    padding: 0;
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 36px;
+    color: #F2F2F2;
+}
+
+.footer_box__resources li:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.footer_box__quick_link li:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+
+.footer_box__available_payment_systems {
+    font-family: Rubik;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 48px;
+    max-width: 26%;
+}
+
+.footer_box_available_payment_systems__logos {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_social_media {
+    padding-bottom: 80px;
+}
+
+.footer_icons_block {
+    max-width: 18%;
+    justify-content: space-between;
+}
+
+
+
+
+
+.footer_vk_icon {
+    filter: grayscale(100%);
+    padding-right: 2.22%;
+    -webkit-filter: grayscale(100%);
+}
+
+.footer_telegram_icon {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.footer_youtube_icon {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+
+
+.footer_vk_icon:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.footer_telegram_icon:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.footer_youtube_icon:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
