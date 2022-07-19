@@ -482,6 +482,7 @@ body {
 /*Контент 3-го блока*/
 
 .intro2__promo_text {
+    text-align: center;
     font-family: Rubik, sans-serif;
     font-weight: 700;
     font-size: 40px;
